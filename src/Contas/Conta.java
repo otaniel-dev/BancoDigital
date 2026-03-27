@@ -20,10 +20,12 @@ public abstract class Conta implements iConta {
         saldo += valor;
     }
 
+    @Override
     public void sacar(double valor){
         saldo -= valor;
     }
 
+    @Override
     public void transferir(double valor, Conta contaDestino){
          saldo -= valor;
          contaDestino.depositar(valor);
@@ -44,7 +46,7 @@ public abstract class Conta implements iConta {
     protected void imprimirInformacoesComuns(){
         System.out.println("Agencia: " + agencia);
         System.out.println("Numero: " + numero);
-        System.out.printf("Saldo: R$ %.2f", saldo);
+        System.out.printf("Saldo: R$ %.2f\n", saldo);
     }
 
 }
