@@ -42,39 +42,25 @@ O projeto evoluiu de 7 classes simples sem relacionamento para um sistema com ba
 
 ```
 src/
-├── Banco.java
 ├── Main.java
-├── Clientes/
+├── banco/
+│   └── Banco.java
+├── clientes/
 │   └── Cliente.java
-├── Contas/
+├── contas/
 │   ├── iConta.java
 │   ├── Conta.java
 │   ├── ContaCorrente.java
 │   └── ContaPoupanca.java
-├── Exceptions/
+├── exceptions/
 │   ├── SaldoInsuficiente.java
 │   └── ValorInvalidoException.java
-└── Transacoes/
+└── transacoes/
     └── Transacoes.java
 ```
 
 ---
 
-## Diagrama de classes
-
-```
-iConta (interface)
-    └── Conta (abstract)
-            ├── ContaCorrente
-            └── ContaPoupanca
-
-Conta ──► Cliente  (toda conta tem um titular)
-Conta ──► Transacoes  (histórico de movimentações)
-Banco ──► Conta[]  (gerencia todas as contas)
-Banco ──► Cliente[]  (gerencia todos os clientes)
-```
-
----
 
 ## Como executar
 
@@ -148,7 +134,6 @@ Saldo após operação : R$ 45,00
 - [ ] Implementar `equals()` e `hashCode()` em `Cliente`
 - [ ] Adicionar rendimento de juros em `ContaPoupanca`
 - [ ] Adicionar limite de cheque especial em `ContaCorrente`
-- [ ] Converter nomes de pacotes para letras minúsculas (convenção Java)
 
 ---
 
