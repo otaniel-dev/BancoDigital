@@ -1,8 +1,8 @@
-package Contas;
+package contas;
 
-import Clientes.Cliente;
-import Exceptions.*;
-import Transacoes.Transacoes;
+import clientes.Cliente;
+import exceptions.*;
+import transacoes.Transacoes;
 
 public abstract class Conta implements iConta {
 
@@ -56,6 +56,9 @@ public abstract class Conta implements iConta {
         }
     }
 
+    public Cliente getCliente() {
+        return cliente;
+    }
     public String getAgencia() {
         return agencia;
     }
@@ -77,9 +80,15 @@ public abstract class Conta implements iConta {
         System.out.println("Transações:");
         System.out.println("=========================");
         transacoes.getTransacoes().forEach(t -> System.out.println(t + "\n-------------------------"));
-
-
-
     }
 
+    @Override
+    public String toString() {
+        return "Conta{" +
+                "agencia='" + agencia + "'" +
+                ", numero=" + numero +
+                ", saldo=R$ " + String.format("%.2f", saldo) +
+                ", titular='" + cliente.getNome() + "'" +
+                "}";
+    }
 }

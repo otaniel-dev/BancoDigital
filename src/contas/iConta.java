@@ -1,6 +1,6 @@
-package Contas;
+package contas;
 
-import Exceptions.*;
+import exceptions.*;
 
 public interface iConta {
     void depositar(double valor) throws ValorInvalidoException;

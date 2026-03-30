@@ -1,6 +1,6 @@
-package Contas;
+package contas;
 
-import Clientes.Cliente;
+import clientes.Cliente;
 
 public class ContaCorrente extends Conta {
 

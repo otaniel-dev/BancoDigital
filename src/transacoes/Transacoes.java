@@ -1,10 +1,10 @@
-package Transacoes;
+package transacoes;
 
 import java.util.*;
 
 public class Transacoes {
 
-    List <String> transacoes = new ArrayList<>();
+    private List <String> transacoes = new ArrayList<>();
 
     public void adicionarDeposito(double valor, double saldoAtual){
 

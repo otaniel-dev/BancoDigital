@@ -1,5 +1,5 @@
-package Contas;
-import Clientes.Cliente;
+package contas;
+import clientes.Cliente;
 
 public class ContaPoupanca extends Conta {
 
